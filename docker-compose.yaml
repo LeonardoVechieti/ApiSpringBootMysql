@@ -4,7 +4,7 @@ services:
     build:
       context: ./
       dockerfile: ./Dockerfile
-    image: spring_boo_com_mysql/api
+    image: api-spring-mysql/api
     ports:
       - '8080:8080'
       - '5005:5005'

@@ -8,11 +8,11 @@ ENV ADDITIONAL_OPTS=${ADDITIONAL_OPTS}
 
 WORKDIR /opt/spring_boot
 
-COPY /target/spring-boot*.jar spring_boot_com_mysql.jar
+COPY /target/spring-boot*.jar api-spring-mysql.jar
 
 SHELL ["/bin/sh", "-c"]
 
 EXPOSE 5005
 EXPOSE 8080
 
-CMD java ${ADDITIONAL_OPTS} -jar spring_boot_com_mysql.jar --spring.profiles.active=${PROFILE}{ADDITIONAL_OPTS} -jar app.jar --spring.profiles.active=${PROFILE}
+CMD java ${ADDITIONAL_OPTS} -jar api-spring-mysql.jar --spring.profiles.active=${PROFILE}
